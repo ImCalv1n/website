@@ -9,13 +9,20 @@
 
 <body>
     <nav>
-        <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Featured</a></li>
-            <li><a href="#">Leadership</a></li>
-            <li><a href="#">Latest</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div onclick="hamMenuActivate()" class="ham-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div id="navbar-list" class="untoggled">
+            <ul>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Featured</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="flex-container">
         <p>Calvin</p>
@@ -34,6 +41,6 @@
         </ul>
     </div>
     
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

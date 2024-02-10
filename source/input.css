@@ -40,7 +40,7 @@ body{
 }
 
 .flex-container{
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -78,30 +78,86 @@ h2{
     margin-bottom: 0;
 }
 
-ul{
-    list-style: none;
-    margin: 0;
-    margin-left: 5vh;
-    margin-top: .1vh;
-    padding: 0;
+/* MOBILE */
+@media only screen and (max-width: 768px){
+
+    /* nav{
+        display: flex;
+        justify-content: space-between;
+    } */
+
+    .ham-menu{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        padding-top: 11px;
+        padding-bottom: 12px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        /* margin: auto; */
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+
+
+    #navbar-list{
+        max-width: 100px;
+        /* left: -100px; */
+        background-color: orange;
+    }
+
+    .untoggled{
+        display: none;
+    }
+
+    .toggled{
+        display: block;
+    }
+
 }
 
-li{
-    /* display: inline-block; */
-    margin: 0;
-    margin-top: 3vh;
-    float: left;
-}
-
-/* Fix pixel sizes */
-li a{
-    font-size: 1.30rem;
-    display: inline-block;
-    /* width: 10vw; */
-    padding: 16px;
-    text-decoration: none;
-    text-align: center;
-    color: var(--soft-links);
+/* NON-MOBILE */
+@media only screen and (min-width: 769px){
+    .ham-menu{
+        width: 0;
+        height: 0;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        margin-left: 5vh;
+        margin-top: .1vh;
+        padding: 0;
+    }
+    
+    li{
+        /* display: inline-block; */
+        margin: 0;
+        margin-top: 3vh;
+        float: left;
+    }
+    
+    /* Fix pixel sizes */
+    li a{
+        font-size: 1.30rem;
+        display: inline-block;
+        /* width: 10vw; */
+        padding: 16px;
+        text-decoration: none;
+        text-align: center;
+        color: var(--soft-links);
+    }
 }
 
 .superlatives-list{
