@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* npx tailwindcss -i ./source/input.css -o ./source/styles.css --watch */
+
 :root{
     --primary-color: #7082AA;
     --accent-one: #F3F7F0;
@@ -24,10 +26,11 @@ body{
 #headshot{
     /* float: right; */
     margin: 2%;
+    aspect-ratio: 1 / 1;
     /* margin-top: 10%; */
     object-fit: fill;
-    width: 40%;
-    height: 40%;
+    width: 17vw;
+    /* height: 40%; */
     border-radius: 5%;
     box-shadow: 3px 3px 7px;
 }
@@ -37,15 +40,16 @@ body{
 }
 
 .flex-container{
-    /* background-color: var(--accent-one); */
+    background-color: yellow;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 96vw;
     flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
     padding: 0;
-    margin: 0;
-    /* margin-top: 20vh; */
 }
 
 .flex-container2{
@@ -53,12 +57,13 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    width: 40vw;
     margin: 0;
     padding-bottom: 0;
 }
 
 .flex-container p{
-    font-size: 30rem;
+    font-size: 27vw;
     line-height: 60%;
     margin: 0;
     padding-bottom: 0;
@@ -67,7 +72,7 @@ body{
 }
 
 h2{
-    font-size: 10vh;
+    font-size: 5vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
