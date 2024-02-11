@@ -654,16 +654,15 @@ h2{
 
   #navbar-list{
     max-width: 100px;
-    /* background-color: red; */
+    background-color: red;
     /* left: -100px; */
     list-style: none;
   }
 
   #navbar-list li a{
-    font-size: 1.1rem;
+    font-size: 1.30rem;
     display: inline-block;
-    /* padding: auto; */
-    margin: 5px 10px;
+    padding: 16px;
     text-decoration: none;
     text-align: center;
     color: var(--soft-links);
@@ -675,6 +674,18 @@ h2{
 
   .toggled{
     display: block;
+  }
+
+  .superlatives-list li{
+    font-size: .8rem !important;
+  }
+}
+
+/* MOBILE FOR SMALLER SCREENS */
+
+@media only screen and (max-width: 500px){
+  .superlatives-list li{
+    font-size: .6rem !important;
   }
 }
 
@@ -740,4 +751,56 @@ h2{
   text-decoration: none;
   text-align: center;
   color: var(--accent-one);
+}
+
+.scroller{
+  max-width: 100vw;
+}
+
+.scroller__inner{
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated='true']{
+  /* border: 5px solid lime; */
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+        );
+  mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+        );
+}
+
+.scroller[data-animated='true'] .scroller__inner{
+  width: -moz-max-content;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: 
+        scroll
+        var(--_animation-duration, 40s)
+        var(--_animation-direction, forwards)
+        linear
+        infinite;
+}
+
+.scroller[data-direction='right']{
+  --_animation-direction: reverse;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - .5rem));
+  }
 }
