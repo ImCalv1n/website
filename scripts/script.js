@@ -2,7 +2,6 @@ const navBarList = document.getElementById('navbar-list')
 const scrollers = document.querySelectorAll('.scroller')
 
 function hamMenuActivate(){
-    console.log("fuck you");
     if(navBarList.classList.contains('toggled')){
         navBarList.classList.remove('toggled')
         navBarList.classList.add('untoggled')
