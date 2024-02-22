@@ -594,7 +594,7 @@ body{
 }
 
 .blog-header{
-  background-color: var(--secondary-block);
+  background-color: var(--bg-color);
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: -1.7vh;
@@ -602,7 +602,7 @@ body{
 }
 
 .blog-content{
-  background-color: var(--secondary-block);
+  background-color: var(--bg-color);
   /* margin: 3vw; */
   padding-top: 3vh;
   width: 100vw;
